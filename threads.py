@@ -1,6 +1,6 @@
 from threading import Thread
 
-from models import *Card
+from models import Card
 
 class Transaction(Thread):
     def __init__(self, amount, card: Card):

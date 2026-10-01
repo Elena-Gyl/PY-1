@@ -25,10 +25,12 @@ import matplotlib.pyplot as plt
 # print(v)
 
 class Vector(object):
+    #Конструктор класса (ООП-конструктор)
     def __init__(self, x: int, y: int) -> None:
         self.x = x
         self.y = y
 
+    #Для сложения (если int)
     def __add__(self, other):
         x = self.x + other.x
         y = self.y + other.y
@@ -39,6 +41,7 @@ class Vector(object):
         y = self.y - other.y
         return Vector(x, y)
 
+    #Отображение векторов
     def display_add(self, other):
         res = self + other
         x1 = [0, self.x]
@@ -51,7 +54,7 @@ class Vector(object):
         plt.plot(x1, y1, x2, y2, rx, ry, '-.g')
         plt.show()
 
-
+    #Как будет выводить print
     def __str__(self) -> str:
         return f'Vector({self.x}, {self.y})'
 
@@ -60,6 +63,6 @@ class Vector(object):
 v1 = Vector(10, 17)
 v2 = Vector(9, 4)
 v3 = Vector(50, 50)
-# v1.display_add(v2)
+v1.display_add(v2)
 v = v1 + v2 + v3
 print(v)
