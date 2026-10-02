@@ -36,6 +36,7 @@ class People:
 
 
 class Student(People):
+    #статический атрибут
     vuzs = {'MГУ': 5,
             'ЯВВФУ': 4,
             'MГПУ': 4
